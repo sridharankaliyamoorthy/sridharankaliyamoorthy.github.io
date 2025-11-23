@@ -441,7 +441,7 @@ nav::before {
 
 .full-name {
     color: #00cc33;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: lowercase;
@@ -449,6 +449,44 @@ nav::before {
     position: relative;
     z-index: 10;
     text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+}
+
+.typing-name {
+    font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+    color: #00cc33;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 3px solid #00ff41;
+    animation: typing-name 2.5s steps(25, end), blink-cursor-name 1s step-end infinite;
+    width: 0;
+    animation-fill-mode: forwards;
+    text-shadow: 
+        0 0 10px rgba(0, 255, 65, 0.8),
+        0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+@keyframes typing-name {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-cursor-name {
+    0%, 50% {
+        border-color: #00ff41;
+    }
+    51%, 100% {
+        border-color: transparent;
+    }
 }
 
 
@@ -1501,7 +1539,11 @@ footer {
     }
 
     .full-name {
-        font-size: 1.75rem;
+        font-size: 2rem;
+    }
+    
+    .typing-name {
+        font-size: 2rem;
     }
 
     .hero-subtitle {
@@ -1590,7 +1632,11 @@ footer {
     }
 
     .full-name {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
+    }
+    
+    .typing-name {
+        font-size: 1.75rem;
     }
 
     .hero-subtitle {
