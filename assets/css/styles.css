@@ -997,10 +997,14 @@ section .container > * {
 
 /* Skills Section with Logos */
 .skills-section {
-    background: #000000;
+    background: transparent;
     padding: 2rem 0;
     position: relative;
     overflow: hidden;
+}
+
+.skills-section .container {
+    background: transparent;
 }
 
 .skills-section::before {
