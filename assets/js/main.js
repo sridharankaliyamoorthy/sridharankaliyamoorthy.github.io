@@ -1,7 +1,43 @@
 // Main JavaScript for GitHub Pages Personal Website
-// Minimal, clean interactivity
+// Mr. Robot Boot Menu Style with Binary Rain
+
+// Binary Rain Effect
+function createBinaryRain() {
+    const binaryRain = document.getElementById('binaryRain');
+    if (!binaryRain) return;
+    
+    const chars = ['0', '1', 'T'];
+    const columns = Math.floor(window.innerWidth / 20);
+    
+    for (let i = 0; i < columns; i++) {
+        const char = document.createElement('div');
+        char.className = 'binary-char';
+        char.textContent = chars[Math.floor(Math.random() * chars.length)];
+        char.style.left = `${i * 20}px`;
+        char.style.animationDuration = `${3 + Math.random() * 4}s`;
+        char.style.animationDelay = `${Math.random() * 2}s`;
+        binaryRain.appendChild(char);
+    }
+    
+    // Continuously add more characters
+    setInterval(() => {
+        const char = document.createElement('div');
+        char.className = 'binary-char';
+        char.textContent = chars[Math.floor(Math.random() * chars.length)];
+        char.style.left = `${Math.random() * window.innerWidth}px`;
+        char.style.animationDuration = `${3 + Math.random() * 4}s`;
+        binaryRain.appendChild(char);
+        
+        // Remove old characters
+        if (binaryRain.children.length > 100) {
+            binaryRain.removeChild(binaryRain.firstChild);
+        }
+    }, 200);
+}
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize binary rain
+    createBinaryRain();
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
