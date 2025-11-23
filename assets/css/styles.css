@@ -13,18 +13,18 @@
 :root {
     --primary-color: #000000;
     --secondary-color: #0a0000;
-    --accent-color: #ff0000;
-    --accent-color-2: #ff3333;
-    --accent-color-3: #cc0000;
+    --accent-color: #cc0000;
+    --accent-color-2: #990000;
+    --accent-color-3: #660000;
     --text-primary: #ffffff;
-    --text-secondary: #ff6666;
+    --text-secondary: #cccccc;
     --bg-light: #000000;
     --bg-dark: #0a0000;
-    --bg-card: #1a0000;
+    --bg-card: #0f0f0f;
     --border-color: #330000;
-    --shadow: 0 4px 6px rgba(255, 0, 0, 0.2);
-    --shadow-lg: 0 10px 25px rgba(255, 0, 0, 0.3);
-    --shadow-glow: 0 0 20px rgba(255, 0, 0, 0.5);
+    --shadow: 0 4px 6px rgba(204, 0, 0, 0.15);
+    --shadow-lg: 0 10px 25px rgba(204, 0, 0, 0.2);
+    --shadow-glow: 0 0 15px rgba(204, 0, 0, 0.3);
     --transition: all 0.3s ease;
 }
 
@@ -82,10 +82,10 @@ body::before {
 
 .binary-char {
     position: absolute;
-    color: #ff0000;
+    color: rgba(204, 0, 0, 0.4);
     font-family: 'Courier New', monospace;
-    font-size: 14px;
-    opacity: 0.3;
+    font-size: 12px;
+    opacity: 0.2;
     animation: fall linear infinite;
 }
 
@@ -146,16 +146,16 @@ a:hover {
 /* Navigation - Mr. Robot Boot Menu Style */
 nav {
     background: #000000;
-    border-bottom: 2px solid #ff0000;
-    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(204, 0, 0, 0.4);
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
     box-shadow: 
-        0 0 20px rgba(255, 0, 0, 0.5),
+        0 0 10px rgba(204, 0, 0, 0.2),
         0 2px 10px rgba(0, 0, 0, 0.9),
-        inset 0 1px 0 rgba(255, 0, 0, 0.2);
+        inset 0 1px 0 rgba(204, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -167,9 +167,9 @@ nav::before {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, #ff0000, transparent);
+    background: linear-gradient(90deg, transparent, rgba(204, 0, 0, 0.5), transparent);
     animation: scanline 3s linear infinite;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+    box-shadow: 0 0 5px rgba(204, 0, 0, 0.4);
 }
 
 @keyframes scanline {
@@ -190,23 +190,23 @@ nav::before {
 
 .terminal-prompt {
     font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
-    color: #ff0000;
+    color: #cc0000;
     font-size: 0.9rem;
     font-weight: 600;
     text-shadow: 
-        0 0 10px rgba(255, 0, 0, 1),
-        0 0 20px rgba(255, 0, 0, 0.6),
-        0 0 30px rgba(255, 0, 0, 0.3);
+        0 0 5px rgba(204, 0, 0, 0.6),
+        0 0 10px rgba(204, 0, 0, 0.3);
     letter-spacing: 0.1em;
     animation: terminal-blink 1s step-end infinite;
     position: relative;
+    opacity: 0.9;
 }
 
 .terminal-prompt::after {
     content: '_';
     animation: blink 1s step-end infinite;
-    color: #ff0000;
-    text-shadow: 0 0 10px rgba(255, 0, 0, 1);
+    color: #cc0000;
+    text-shadow: 0 0 5px rgba(204, 0, 0, 0.6);
 }
 
 @keyframes blink {
@@ -229,22 +229,22 @@ nav::before {
 
 .nav-links-terminal a {
     font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: #ff0000;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #cc0000;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    padding: 0.6rem 1.2rem;
+    padding: 0.5rem 1rem;
     position: relative;
     display: block;
     text-shadow: 
-        0 0 5px rgba(255, 0, 0, 0.8),
-        0 0 10px rgba(255, 0, 0, 0.5),
-        0 0 15px rgba(255, 0, 0, 0.3);
+        0 0 3px rgba(204, 0, 0, 0.5),
+        0 0 6px rgba(204, 0, 0, 0.3);
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-style: preserve-3d;
     perspective: 1000px;
+    opacity: 0.85;
 }
 
 .nav-links-terminal a::before {
@@ -259,21 +259,21 @@ nav::before {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
-    background: #ff0000;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 1);
+    height: 1px;
+    background: #cc0000;
+    box-shadow: 0 0 5px rgba(204, 0, 0, 0.6);
     transition: width 0.3s ease;
 }
 
 .nav-links-terminal a:hover {
     color: #ffffff;
-    background: rgba(255, 0, 0, 0.2);
+    background: rgba(204, 0, 0, 0.15);
     text-shadow: 
-        0 0 10px rgba(255, 0, 0, 1),
-        0 0 20px rgba(255, 0, 0, 0.8),
-        0 0 30px rgba(255, 0, 0, 0.6);
+        0 0 6px rgba(204, 0, 0, 0.8),
+        0 0 12px rgba(204, 0, 0, 0.5);
     transform: translateY(-2px) translateZ(20px);
     animation: glitch-red 0.3s infinite;
+    opacity: 1;
 }
 
 .nav-links-terminal a:hover::before {
@@ -288,36 +288,35 @@ nav::before {
     0%, 100% {
         transform: translateY(-2px) translateZ(20px);
         text-shadow: 
-            0 0 10px rgba(255, 0, 0, 1),
-            0 0 20px rgba(255, 0, 0, 0.8),
-            0 0 30px rgba(255, 0, 0, 0.6);
+            0 0 6px rgba(204, 0, 0, 0.8),
+            0 0 12px rgba(204, 0, 0, 0.5);
     }
     25% {
-        transform: translateY(-2px) translateX(2px) translateZ(20px);
+        transform: translateY(-2px) translateX(1px) translateZ(20px);
         text-shadow: 
-            2px 0 10px rgba(255, 100, 100, 0.9),
-            0 0 20px rgba(255, 0, 0, 0.8);
+            1px 0 6px rgba(204, 50, 50, 0.7),
+            0 0 12px rgba(204, 0, 0, 0.5);
     }
     50% {
-        transform: translateY(-2px) translateX(-2px) translateZ(20px);
+        transform: translateY(-2px) translateX(-1px) translateZ(20px);
         text-shadow: 
-            -2px 0 10px rgba(255, 50, 50, 0.9),
-            0 0 20px rgba(255, 0, 0, 0.8);
+            -1px 0 6px rgba(204, 30, 30, 0.7),
+            0 0 12px rgba(204, 0, 0, 0.5);
     }
     75% {
         transform: translateY(-2px) translateZ(20px);
         text-shadow: 
-            0 0 10px rgba(255, 0, 0, 1),
-            0 0 20px rgba(255, 0, 0, 0.8);
+            0 0 6px rgba(204, 0, 0, 0.8),
+            0 0 12px rgba(204, 0, 0, 0.5);
     }
 }
 
 .nav-links-terminal a:active {
     transform: translateY(0) translateZ(10px) scale(0.98);
     text-shadow: 
-        0 0 5px rgba(255, 0, 0, 1),
-        0 0 10px rgba(255, 0, 0, 0.6);
-    background: rgba(255, 0, 0, 0.3);
+        0 0 4px rgba(204, 0, 0, 0.6),
+        0 0 8px rgba(204, 0, 0, 0.4);
+    background: rgba(204, 0, 0, 0.2);
 }
 
 /* Container */
@@ -330,8 +329,8 @@ nav::before {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 4rem 2rem;
-    margin: 2rem 0;
+    padding: 2.5rem 2rem;
+    margin: 1rem 0;
 }
 
 .profile-image-container {
@@ -342,24 +341,24 @@ nav::before {
 }
 
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    border: 4px solid #ff0000;
+    border: 2px solid rgba(204, 0, 0, 0.4);
     box-shadow: 
-        0 0 20px rgba(255, 0, 0, 0.6),
-        0 0 40px rgba(255, 0, 0, 0.3);
+        0 0 10px rgba(204, 0, 0, 0.3),
+        0 0 20px rgba(204, 0, 0, 0.15);
     object-fit: cover;
     transition: var(--transition);
-    filter: contrast(1.1) brightness(0.95);
+    filter: contrast(1.05) brightness(0.95);
 }
 
 .profile-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 
-        0 0 30px rgba(255, 0, 0, 0.8),
-        0 0 60px rgba(255, 0, 0, 0.5);
-    border-color: #ff3333;
+        0 0 15px rgba(204, 0, 0, 0.4),
+        0 0 30px rgba(204, 0, 0, 0.2);
+    border-color: rgba(204, 0, 0, 0.6);
 }
 
 .hero h1 {
@@ -375,18 +374,17 @@ nav::before {
 }
 
 .calling-name {
-    background: linear-gradient(135deg, #ff0000, #ff3333, #cc0000);
+    background: linear-gradient(135deg, #cc0000, #990000, #660000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 900;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     text-shadow: 
-        0 0 20px rgba(255, 0, 0, 0.8),
-        0 0 40px rgba(255, 0, 0, 0.5),
-        0 0 60px rgba(255, 0, 0, 0.3);
+        0 0 10px rgba(204, 0, 0, 0.5),
+        0 0 20px rgba(204, 0, 0, 0.3);
     animation: glow-red 3s ease-in-out infinite alternate;
     display: block;
     font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
@@ -395,16 +393,16 @@ nav::before {
 
 @keyframes glow-red {
     from {
-        filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.8));
+        filter: drop-shadow(0 0 5px rgba(204, 0, 0, 0.5));
         text-shadow: 
-            0 0 20px rgba(255, 0, 0, 0.8),
-            0 0 40px rgba(255, 0, 0, 0.5);
+            0 0 10px rgba(204, 0, 0, 0.5),
+            0 0 20px rgba(204, 0, 0, 0.3);
     }
     to {
-        filter: drop-shadow(0 0 20px rgba(255, 0, 0, 1));
+        filter: drop-shadow(0 0 10px rgba(204, 0, 0, 0.7));
         text-shadow: 
-            0 0 30px rgba(255, 0, 0, 1),
-            0 0 60px rgba(255, 0, 0, 0.6);
+            0 0 15px rgba(204, 0, 0, 0.6),
+            0 0 30px rgba(204, 0, 0, 0.4);
     }
 }
 
@@ -532,26 +530,26 @@ html {
 
 /* Sections */
 section {
-    padding: 3rem 0;
+    padding: 2rem 0;
     scroll-margin-top: 80px;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
 }
 
 /* Cards */
 .card {
-    background: linear-gradient(135deg, rgba(10, 0, 0, 0.9) 0%, rgba(20, 0, 0, 0.8) 100%);
-    border: 1px solid rgba(255, 0, 0, 0.3);
+    background: linear-gradient(135deg, rgba(10, 0, 0, 0.9) 0%, rgba(15, 0, 0, 0.8) 100%);
+    border: 1px solid rgba(204, 0, 0, 0.2);
     border-radius: 4px;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
     box-shadow: 
-        0 4px 6px rgba(255, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 0, 0, 0.1);
+        0 4px 6px rgba(204, 0, 0, 0.1),
+        inset 0 1px 0 rgba(204, 0, 0, 0.05);
     transition: var(--transition);
     backdrop-filter: blur(10px);
     position: relative;
@@ -560,11 +558,11 @@ section {
 
 .card:hover {
     box-shadow: 
-        0 0 20px rgba(255, 0, 0, 0.5),
-        0 10px 25px rgba(255, 0, 0, 0.3);
-    transform: translateY(-5px);
-    border-color: #ff0000;
-    background: linear-gradient(135deg, rgba(20, 0, 0, 0.95) 0%, rgba(15, 0, 0, 0.9) 100%);
+        0 0 15px rgba(204, 0, 0, 0.3),
+        0 8px 20px rgba(204, 0, 0, 0.2);
+    transform: translateY(-3px);
+    border-color: rgba(204, 0, 0, 0.4);
+    background: linear-gradient(135deg, rgba(15, 0, 0, 0.95) 0%, rgba(12, 0, 0, 0.9) 100%);
 }
 
 .card h3 {
