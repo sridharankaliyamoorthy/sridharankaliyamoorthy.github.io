@@ -7,13 +7,13 @@ function createBinaryRain() {
     if (!binaryRain) return;
     
     const chars = ['0', '1'];
-    const columns = Math.floor(window.innerWidth / 15);
+    const columns = Math.floor(window.innerWidth / 20);
     
     // Create multiple columns of falling binary
     for (let i = 0; i < columns; i++) {
         const column = document.createElement('div');
         column.className = 'binary-column';
-        column.style.left = `${i * 15}px`;
+        column.style.left = `${i * 20}px`;
         column.style.animationDuration = `${2 + Math.random() * 3}s`;
         column.style.animationDelay = `${Math.random() * 2}s`;
         
@@ -22,8 +22,8 @@ function createBinaryRain() {
             const char = document.createElement('div');
             char.className = 'binary-char';
             char.textContent = chars[Math.floor(Math.random() * chars.length)];
-            char.style.top = `${j * 20}px`;
-            char.style.opacity = `${0.3 + Math.random() * 0.7}`;
+            char.style.top = `${j * 25}px`;
+            char.style.opacity = `${0.7 + Math.random() * 0.3}`;
             column.appendChild(char);
         }
         
@@ -37,7 +37,7 @@ function createBinaryRain() {
         char.textContent = chars[Math.floor(Math.random() * chars.length)];
         char.style.left = `${Math.random() * window.innerWidth}px`;
         char.style.animationDuration = `${2 + Math.random() * 3}s`;
-        char.style.opacity = `${0.4 + Math.random() * 0.6}`;
+        char.style.opacity = `${0.7 + Math.random() * 0.3}`;
         binaryRain.appendChild(char);
         
         // Remove old characters

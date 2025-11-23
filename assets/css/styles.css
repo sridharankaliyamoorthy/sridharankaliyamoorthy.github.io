@@ -100,11 +100,13 @@ body::before {
     position: absolute;
     color: #00ff41;
     font-family: 'Courier New', monospace;
-    font-size: 14px;
-    font-weight: 600;
-    opacity: 0.6;
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 0.85;
     animation: fall linear infinite;
-    text-shadow: 0 0 5px rgba(0, 255, 65, 0.8);
+    text-shadow: 
+        0 0 8px rgba(0, 255, 65, 1),
+        0 0 15px rgba(0, 255, 65, 0.6);
 }
 
 @keyframes fall {
@@ -498,7 +500,11 @@ nav::before {
     display: inline-block;
     border-right: 3px solid #00ff41;
     animation: blink-cursor-cmd 1s step-end infinite;
-    padding-right: 0.3rem;
+    padding-right: 0.5rem;
+    width: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    white-space: nowrap;
 }
 
 @keyframes blink-cursor-cmd {
