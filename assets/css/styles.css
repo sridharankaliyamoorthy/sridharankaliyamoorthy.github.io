@@ -746,6 +746,9 @@ section .container > * {
         inset 0 0 10px rgba(0, 255, 65, 0.1);
     position: relative;
     z-index: 10;
+    width: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
 }
 
 .about-header {
@@ -756,6 +759,9 @@ section .container > * {
     margin-bottom: 1rem;
     border-left: 3px solid #00ff88;
     padding-left: 1rem;
+    width: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
 }
 
 .projects-header {
@@ -766,6 +772,9 @@ section .container > * {
     margin-bottom: 1rem;
     border-left: 3px solid #00ff41;
     padding-left: 1rem;
+    width: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
 }
 
 .contact-header {
@@ -776,6 +785,9 @@ section .container > * {
     margin-bottom: 1rem;
     border-left: 3px solid #00cc33;
     padding-left: 1rem;
+    width: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
 }
 
 .achievement-header {
@@ -793,6 +805,9 @@ section .container > * {
         inset 0 0 10px rgba(0, 255, 65, 0.1);
     position: relative;
     z-index: 10;
+    width: auto !important;
+    max-width: 100% !important;
+    overflow: visible !important;
 }
 
 @keyframes terminal-type {
