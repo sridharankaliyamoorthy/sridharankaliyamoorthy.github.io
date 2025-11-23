@@ -588,6 +588,18 @@ html {
 section {
     padding: 2rem 0;
     scroll-margin-top: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+section .container {
+    position: relative;
+    z-index: 10;
+}
+
+section .container > * {
+    position: relative;
+    z-index: 10;
 }
 
 .section-title {
@@ -1052,20 +1064,27 @@ section {
     z-index: 10;
 }
 
-.project-card * {
-    position: relative;
-    z-index: 10;
-    color: #00cc33 !important;
-}
-
-.project-card p {
+.project-card p,
+.project-card li,
+.project-card span,
+.project-card div {
     color: #00cc33 !important;
     opacity: 1 !important;
     visibility: visible !important;
+    position: relative;
+    z-index: 10;
 }
 
 .project-card ul {
     color: #00cc33 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative;
+    z-index: 10;
+}
+
+.project-card strong {
+    color: #00ff41 !important;
     opacity: 1 !important;
     visibility: visible !important;
 }
