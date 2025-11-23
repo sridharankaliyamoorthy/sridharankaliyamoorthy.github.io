@@ -1,0 +1,13 @@
+# Custom Domain Configuration
+# 
+# To use a custom domain:
+# 1. Replace 'yourdomain.com' below with your actual domain
+# 2. Configure DNS settings to point to your GitHub Pages site
+# 3. Enable custom domain in GitHub repository settings
+#
+# Example:
+# www.yourdomain.com
+# yourdomain.com
+#
+# Leave this file empty or remove it if not using a custom domain
+
