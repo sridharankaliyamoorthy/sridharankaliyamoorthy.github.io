@@ -491,6 +491,37 @@ nav::before {
     }
 }
 
+/* Typing animation for section headers */
+.typing-header-cmd {
+    font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 3px solid #00ff41;
+    animation: typing-cmd 2s steps(20, end), blink-cursor-cmd 1s step-end infinite;
+    width: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing-cmd {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-cursor-cmd {
+    0%, 50% {
+        border-color: #00ff41;
+    }
+    51%, 100% {
+        border-color: transparent;
+    }
+}
+
 
 .hero-subtitle {
     font-size: 1.5rem;
@@ -906,12 +937,31 @@ section .container > * {
 
 .card:hover {
     box-shadow: 
-        0 0 20px rgba(0, 255, 65, 0.4),
-        0 8px 20px rgba(0, 255, 65, 0.3),
-        inset 0 0 30px rgba(0, 255, 65, 0.1);
-    transform: translateY(-3px);
-    border-color: rgba(0, 255, 65, 0.6);
+        0 0 25px rgba(0, 255, 65, 0.5),
+        0 10px 30px rgba(0, 255, 65, 0.4),
+        inset 0 0 35px rgba(0, 255, 65, 0.15);
+    transform: translateY(-5px) scale(1.02);
+    border-color: rgba(0, 255, 65, 0.8);
+    border-left-width: 4px;
     background: #000000;
+    animation: cardPop 0.4s ease-out;
+}
+
+.card:hover::before {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 1);
+}
+
+@keyframes cardPop {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-7px) scale(1.03);
+    }
+    100% {
+        transform: translateY(-5px) scale(1.02);
+    }
 }
 
 .card h2, .card h3 {
