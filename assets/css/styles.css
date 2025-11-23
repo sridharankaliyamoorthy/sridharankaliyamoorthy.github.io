@@ -441,7 +441,7 @@ nav::before {
 
 .full-name {
     color: #00cc33;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: lowercase;
@@ -456,7 +456,7 @@ nav::before {
 .typing-name {
     font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
     color: #00cc33;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: lowercase;
@@ -499,9 +499,8 @@ nav::before {
     white-space: nowrap;
     display: inline-block;
     border-right: 3px solid #00ff41;
-    animation: typing-cmd 2s steps(20, end), blink-cursor-cmd 1s step-end infinite;
+    animation: typing-cmd 2s steps(20, end) forwards, blink-cursor-cmd 1s step-end 2s 3, hide-cursor 0s 5s forwards;
     width: 0;
-    animation-fill-mode: forwards;
 }
 
 @keyframes typing-cmd {
@@ -519,6 +518,12 @@ nav::before {
     }
     51%, 100% {
         border-color: transparent;
+    }
+}
+
+@keyframes hide-cursor {
+    to {
+        border-right-color: transparent;
     }
 }
 
@@ -1203,10 +1208,10 @@ section .container > * {
 
 .skills-grid-logos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-top: 2rem;
-    max-width: 700px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
