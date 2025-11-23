@@ -916,11 +916,12 @@ section .container > * {
     box-shadow: 
         0 4px 6px rgba(0, 255, 65, 0.2),
         inset 0 0 20px rgba(0, 255, 65, 0.1);
-    transition: var(--transition);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     backdrop-filter: blur(10px);
     position: relative;
     z-index: 2;
     font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+    cursor: pointer;
 }
 
 .card::before {
