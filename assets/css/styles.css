@@ -1079,9 +1079,9 @@ section .container > * {
 
 .skill-logo-item:hover {
     transform: translateY(-15px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4), 0 0 30px rgba(124, 58, 237, 0.3);
-    border-color: var(--accent-color);
-    background: linear-gradient(135deg, rgba(26, 31, 58, 0.95) 0%, rgba(26, 31, 58, 0.9) 100%);
+    box-shadow: 0 15px 40px rgba(0, 255, 65, 0.4), 0 0 30px rgba(0, 255, 65, 0.3);
+    border-color: #00ff41;
+    background: #000000;
     z-index: 10;
 }
 
