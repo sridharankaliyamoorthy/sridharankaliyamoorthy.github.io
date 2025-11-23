@@ -355,8 +355,15 @@ nav::before {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 2.5rem 2rem;
-    margin: 1rem 0;
+    padding: 1.5rem 2rem;
+    margin: 0.5rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+.hero * {
+    position: relative;
+    z-index: 10;
 }
 
 .profile-image-container {
@@ -376,7 +383,7 @@ nav::before {
         0 0 30px rgba(0, 255, 65, 0.3);
     object-fit: cover;
     transition: var(--transition);
-    filter: contrast(1.1) brightness(0.9) hue-rotate(90deg);
+    /* Keep original image colors - no filter */
 }
 
 .profile-image:hover {
@@ -433,39 +440,43 @@ nav::before {
 }
 
 .full-name {
-    background: linear-gradient(135deg, var(--text-primary), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: 2.5rem;
+    color: #00cc33;
+    font-size: 2rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: lowercase;
-    opacity: 0.9;
     display: block;
+    position: relative;
+    z-index: 10;
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
 }
 
 
 .hero-subtitle {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 1.5rem;
+    color: #00ff41;
+    margin-bottom: 1rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    position: relative;
+    z-index: 10;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
 }
 
 .subtitle-highlight {
-    background: linear-gradient(135deg, var(--accent-color), var(--accent-color-2));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #00ff41;
     font-weight: 700;
     transition: var(--transition);
     display: inline-block;
+    text-shadow: 
+        0 0 5px rgba(0, 255, 65, 0.8),
+        0 0 10px rgba(0, 255, 65, 0.4);
+    position: relative;
+    z-index: 10;
 }
 
 .subtitle-highlight:hover {
@@ -474,19 +485,23 @@ nav::before {
 }
 
 .python-nerd {
-    background: linear-gradient(135deg, #f59e0b, #fbbf24);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #00ff88;
     animation: python-glow 2s ease-in-out infinite alternate;
+    text-shadow: 
+        0 0 8px rgba(0, 255, 136, 0.9),
+        0 0 16px rgba(0, 255, 136, 0.5);
 }
 
 @keyframes python-glow {
     from {
-        filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.5));
+        text-shadow: 
+            0 0 8px rgba(0, 255, 136, 0.9),
+            0 0 16px rgba(0, 255, 136, 0.5);
     }
     to {
-        filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.8));
+        text-shadow: 
+            0 0 12px rgba(0, 255, 136, 1),
+            0 0 24px rgba(0, 255, 136, 0.7);
     }
 }
 
@@ -507,20 +522,26 @@ nav::before {
 }
 
 .hero .tagline {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #00cc33;
+    margin-bottom: 1rem;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    z-index: 10;
+    font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
+    line-height: 1.6;
 }
 
 .expertise-tags {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 0.75rem;
-    margin: 2rem 0;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 10;
 }
 
 .expertise-tag {
@@ -953,15 +974,15 @@ section {
     height: 50px;
     object-fit: contain;
     margin-bottom: 0.5rem;
-    filter: grayscale(100%) brightness(0.5) hue-rotate(90deg) saturate(2);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     z-index: 2;
-    filter: grayscale(100%) brightness(0.4) hue-rotate(90deg) saturate(3) drop-shadow(0 0 8px rgba(0, 255, 65, 0.5));
+    /* Keep original logo colors - no filter */
+    filter: drop-shadow(0 0 5px rgba(0, 255, 65, 0.3));
 }
 
 .skill-logo-item:hover .skill-logo {
-    filter: grayscale(0%) brightness(1.5) hue-rotate(90deg) saturate(2) drop-shadow(0 0 20px rgba(0, 255, 65, 1)) drop-shadow(0 0 40px rgba(0, 255, 65, 0.6));
+    filter: drop-shadow(0 0 15px rgba(0, 255, 65, 0.8)) drop-shadow(0 0 30px rgba(0, 255, 65, 0.5));
     transform: scale(1.15) rotate(3deg);
 }
 
