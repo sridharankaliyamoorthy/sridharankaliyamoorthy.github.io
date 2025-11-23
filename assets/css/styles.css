@@ -753,12 +753,19 @@ section .container > * {
 
 .about-header {
     font-size: 1.8rem;
-    color: #00ff88;
+    color: #00ff41;
     text-align: left;
     margin-left: 0;
-    margin-bottom: 1rem;
-    border-left: 3px solid #00ff88;
-    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #00ff41;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    background: #000000;
+    box-shadow: 
+        0 0 10px rgba(0, 255, 65, 0.4),
+        inset 0 0 10px rgba(0, 255, 65, 0.1);
+    position: relative;
+    z-index: 10;
     width: auto !important;
     max-width: 100% !important;
     overflow: visible !important;
@@ -769,9 +776,16 @@ section .container > * {
     color: #00ff41;
     text-align: left;
     margin-left: 0;
-    margin-bottom: 1rem;
-    border-left: 3px solid #00ff41;
-    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #00ff41;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    background: #000000;
+    box-shadow: 
+        0 0 10px rgba(0, 255, 65, 0.4),
+        inset 0 0 10px rgba(0, 255, 65, 0.1);
+    position: relative;
+    z-index: 10;
     width: auto !important;
     max-width: 100% !important;
     overflow: visible !important;
@@ -779,12 +793,19 @@ section .container > * {
 
 .contact-header {
     font-size: 1.8rem;
-    color: #00cc33;
+    color: #00ff41;
     text-align: left;
     margin-left: 0;
-    margin-bottom: 1rem;
-    border-left: 3px solid #00cc33;
-    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #00ff41;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    background: #000000;
+    box-shadow: 
+        0 0 10px rgba(0, 255, 65, 0.4),
+        inset 0 0 10px rgba(0, 255, 65, 0.1);
+    position: relative;
+    z-index: 10;
     width: auto !important;
     max-width: 100% !important;
     overflow: visible !important;
@@ -832,12 +853,13 @@ section .container > * {
         0 0 10px rgba(0, 255, 65, 0.8),
         0 0 20px rgba(0, 255, 65, 0.4);
     position: relative;
-    overflow: hidden;
+    display: inline-block;
     white-space: nowrap;
     border-right: 3px solid #00ff41;
-    animation: typing 2s steps(15, end), blink-cursor 1s step-end infinite;
-    width: 0;
-    animation-fill-mode: forwards;
+    animation: blink-cursor 1s step-end infinite;
+    padding-right: 0.5rem;
+    width: auto !important;
+    overflow: visible !important;
 }
 
 @keyframes typing {
