@@ -7,13 +7,15 @@ function createBinaryRain() {
     if (!binaryRain) return;
     
     const chars = ['0', '1'];
-    const columns = Math.floor(window.innerWidth / 20);
+    // Adjust column spacing based on screen size
+    const columnSpacing = window.innerWidth < 480 ? 25 : window.innerWidth < 768 ? 20 : 18;
+    const columns = Math.floor(window.innerWidth / columnSpacing);
     
     // Create multiple columns of falling binary
     for (let i = 0; i < columns; i++) {
         const column = document.createElement('div');
         column.className = 'binary-column';
-        column.style.left = `${i * 20}px`;
+        column.style.left = `${i * columnSpacing}px`;
         column.style.animationDuration = `${2 + Math.random() * 3}s`;
         column.style.animationDelay = `${Math.random() * 2}s`;
         
