@@ -506,19 +506,58 @@ nav::before {
 }
 
 .python-nerd-tag {
-    background: #000000;
-    border-color: #00ff41;
+    background: linear-gradient(135deg, rgba(0, 255, 65, 0.15) 0%, rgba(0, 255, 65, 0.05) 100%);
+    border: 2px solid #00ff41;
+    border-left: 4px solid #00ff41;
     color: #00ff41;
-    box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
-    font-weight: 600;
+    box-shadow: 
+        0 0 20px rgba(0, 255, 65, 0.6),
+        0 0 40px rgba(0, 255, 65, 0.3),
+        inset 0 0 15px rgba(0, 255, 65, 0.1);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+    text-shadow: 
+        0 0 10px rgba(0, 255, 65, 0.9),
+        0 0 20px rgba(0, 255, 65, 0.5);
+    position: relative;
+    animation: pythonNerdGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pythonNerdGlow {
+    0% {
+        box-shadow: 
+            0 0 20px rgba(0, 255, 65, 0.6),
+            0 0 40px rgba(0, 255, 65, 0.3),
+            inset 0 0 15px rgba(0, 255, 65, 0.1);
+        text-shadow: 
+            0 0 10px rgba(0, 255, 65, 0.9),
+            0 0 20px rgba(0, 255, 65, 0.5);
+    }
+    100% {
+        box-shadow: 
+            0 0 30px rgba(0, 255, 65, 0.8),
+            0 0 60px rgba(0, 255, 65, 0.5),
+            inset 0 0 20px rgba(0, 255, 65, 0.2);
+        text-shadow: 
+            0 0 15px rgba(0, 255, 65, 1),
+            0 0 30px rgba(0, 255, 65, 0.7);
+    }
 }
 
 .python-nerd-tag:hover {
-    background: rgba(0, 255, 65, 0.1);
-    box-shadow: 0 0 25px rgba(0, 255, 65, 0.7);
-    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(135deg, rgba(0, 255, 65, 0.2) 0%, rgba(0, 255, 65, 0.1) 100%);
+    box-shadow: 
+        0 0 35px rgba(0, 255, 65, 0.9),
+        0 0 70px rgba(0, 255, 65, 0.6),
+        inset 0 0 25px rgba(0, 255, 65, 0.3);
+    transform: translateY(-3px) scale(1.08);
     color: #00ff41;
-    text-shadow: 0 0 10px rgba(0, 255, 65, 1);
+    text-shadow: 
+        0 0 20px rgba(0, 255, 65, 1),
+        0 0 40px rgba(0, 255, 65, 0.8);
+    border-width: 3px;
+    border-left-width: 5px;
 }
 
 .hero .tagline {
@@ -565,34 +604,20 @@ nav::before {
 }
 
 .expertise-tag:hover {
-    background-color: rgba(0, 255, 65, 0.15);
+    background-color: rgba(0, 255, 65, 0.1);
     color: #00ff41;
-    transform: translateY(-8px) scale(1.15) rotate(2deg);
+    transform: translateY(-3px) scale(1.05);
     box-shadow: 
-        0 0 25px rgba(0, 255, 65, 0.9),
-        0 0 50px rgba(0, 255, 65, 0.6),
-        0 0 75px rgba(0, 255, 65, 0.3),
-        0 10px 30px rgba(0, 255, 65, 0.4);
+        0 0 15px rgba(0, 255, 65, 0.5),
+        0 0 30px rgba(0, 255, 65, 0.3),
+        0 5px 15px rgba(0, 255, 65, 0.2);
     text-shadow: 
-        0 0 15px rgba(0, 255, 65, 1),
-        0 0 30px rgba(0, 255, 65, 0.8),
-        0 0 45px rgba(0, 255, 65, 0.5);
+        0 0 10px rgba(0, 255, 65, 0.8),
+        0 0 20px rgba(0, 255, 65, 0.4);
     border-color: #00ff41;
     border-width: 2px;
-    z-index: 100;
-    animation: tagPop 0.4s ease-out;
-}
-
-@keyframes tagPop {
-    0% {
-        transform: translateY(0) scale(1) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-12px) scale(1.2) rotate(-3deg);
-    }
-    100% {
-        transform: translateY(-8px) scale(1.15) rotate(2deg);
-    }
+    z-index: 10;
+    transition: all 0.3s ease;
 }
 
 .hero .divider {
