@@ -609,11 +609,67 @@ section .container > * {
     position: relative;
     color: #00ff41;
     font-family: 'Courier New', 'Monaco', 'Consolas', monospace;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
+    text-transform: none;
+    letter-spacing: 0.1em;
     text-shadow: 
         0 0 10px rgba(0, 255, 65, 0.8),
         0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+/* Unique Header Styles */
+.skills-header {
+    font-size: 1.8rem;
+    color: #00ff41;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    border-left: 3px solid #00ff41;
+    padding-left: 1rem;
+    animation: terminal-type 1s steps(15);
+}
+
+.about-header {
+    font-size: 1.8rem;
+    color: #00ff88;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    border-left: 3px solid #00ff88;
+    padding-left: 1rem;
+    animation: terminal-type 1.2s steps(10);
+}
+
+.projects-header {
+    font-size: 1.8rem;
+    color: #00ff41;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    border-left: 3px solid #00ff41;
+    padding-left: 1rem;
+    animation: terminal-type 1.3s steps(20);
+}
+
+.contact-header {
+    font-size: 1.8rem;
+    color: #00cc33;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 1rem;
+    border-left: 3px solid #00cc33;
+    padding-left: 1rem;
+    animation: terminal-type 1.1s steps(12);
+}
+
+@keyframes terminal-type {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
 }
 
 /* Trophy emoji pop animation */
