@@ -121,7 +121,7 @@ I build systems that actually ship — not concept pieces.
 - Designing scalable workflow automation pipelines
 - Contributing to open-source VFX pipeline tools
 
-*Last updated: 2026-05-31 00:45:57 UTC
+*Last updated: 2026-06-01 00:48:05 UTC
 
 ---
 
